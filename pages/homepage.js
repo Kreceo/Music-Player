@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MusicPlayer } from '../components/Musicplayer';
+import ReactAudioPlayer from 'react-audio-player';
 
 const Background = styled.div`
   :after {
@@ -33,16 +34,24 @@ const Background = styled.div`
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%; 
+    width: 100%;
   } 
 `
 
-export default function App () {
-  return (
-    <>
-      <Background>
-        <MusicPlayer />
-      </Background>
-    </>
-  )
+export default class App extends React.Component {
+    render() {
+    return (
+      <>
+        <Background>
+        <ReactAudioPlayer
+          src="/Dizzee.mp3"
+          autoPlay
+          controls
+        />
+          <MusicPlayer />
+        </Background>
+      </>
+    )
+  }
 }
+
