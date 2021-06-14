@@ -1,56 +1,48 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styled from 'styled-components';
+import { MusicPlayer } from '../components/Musicplayer';
 
-export default function Home() {
+const Background = styled.div`
+  :after {
+    background: no-repeat 25vw 40vh / 30vw url("https://assets.codepen.io/518555/blobSolid.svg");
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+  }
+
+  & {
+    align-items: center;
+    background-color: #fff8e7;
+    color: #545454;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+  }
+
+  :before {
+    background: no-repeat 23vw 30vh   
+    url("https://assets.codepen.io/518555/sparkles1.svg"), no-repeat right 25vw bottom 30vh 
+    url("https://assets.codepen.io/518555/sparkles4.svg"), no-repeat 40vw 30vh / 35vw 
+    url("https://assets.codepen.io/518555/blobStripe.svg");
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+  } 
+`
+
+export default function App () {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-    
-    </div>
+    <>
+      <Background>
+        <MusicPlayer />
+      </Background>
+    </>
   )
 }

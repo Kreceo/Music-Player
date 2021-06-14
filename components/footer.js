@@ -8,8 +8,8 @@ function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         >
-        Copyright&copy; Darrell Lane{' '}
-            <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Copyright&copy; Darrell Lane{' '}
+          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
     </footer>
   )

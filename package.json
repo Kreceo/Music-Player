@@ -12,5 +12,12 @@
     "react": "17.x",
     "react-dom": "17.x",
     "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@madzadev/audio-player": "^1.1.9",
+    "next-images": "^1.8.1",
+    "next-transpile-modules": "^7.3.0",
+    "react-audio-player": "^0.17.0"
   }
 }
