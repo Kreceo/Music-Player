@@ -57,6 +57,7 @@ const Buttons = styled.button`
 
     & span {
         margin-top: auto;
+        color: #919191;
     }
 `
 
