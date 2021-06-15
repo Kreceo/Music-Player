@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { ButtonWrapper } from './Buttons';
 
@@ -19,11 +19,6 @@ export function ControlsWrapper () {
     const [count, setCount] = useState(0);
     
     const [playing, setPlaying] = useState(false)
-
-    useEffect(() => {
-        setPlaying(new Audio("/Dizzee.mp3"));
-    }, []);
-   
 
     return (
         <ControlWrapperClass>
