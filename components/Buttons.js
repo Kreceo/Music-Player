@@ -60,9 +60,9 @@ const Buttons = styled.button`
     }
 `
 
-export const ButtonWrapper = ({type, size, title}) => {
+export const ButtonWrapper = ({type, size, title, clickControl}) => {
     return (
-       <Buttons>
+       <Buttons onClick={clickControl}>
             <div className={size}>
                 <i className={type} />
             </div>
