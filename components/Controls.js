@@ -10,17 +10,50 @@ const ControlWrapperClass = styled.div`
 `
 
 export function ControlsWrapper () {
-    const [playing, setPlaying] = useState(false);
+
+    const [shuffle, setShuffle] = useState(false);
+    const [previous, setPrevious] = useState(false);
+
+    const [next, setNext] = useState(false);
+    const [save, setSave] = useState(false);
     const [count, setCount] = useState(0);
+    
+    const [playing, setPlaying] = useState(false)
 
     return (
         <ControlWrapperClass>
-            <ButtonWrapper clickControl={() => setCount(count + 1)} type="fas fa-step-backward" size="Small" title="Previous"/> 
+            <ButtonWrapper 
+                clickControl={() => setShuffle(shuffle == true)} 
+                type="fas fa-random" 
+                size="Small" 
+                title="Shuffle"
+            /> 
+            <ButtonWrapper 
+                clickControl={() => setPrevious(previous == true)} 
+                type="fas fa-step-backward" 
+                size="Medium" 
+                title="Previous"
+            /> 
+            <ButtonWrapper 
+                clickControl={() => setPlaying(playing == false) ? true : false} 
+                type="fas fa-play" 
+                size="Large" 
+                title={playing == false ? 'play' : 'pause'}
+            />
+            <ButtonWrapper 
+                clickControl={() => setNext(next == true)} 
+                type="fas fa-step-forward" 
+                size="Medium" 
+                title="Next"
+            /> 
+            <ButtonWrapper 
+                clickControl={() => setSave(save == true) ? false : true} 
+                type="fas fa-heart" 
+                size="Small" 
+                title={save == true ? 'Saved' : 'Save'}
+            />
             <p>{count}</p>
-            <ButtonWrapper clickControl={() => setCount(count + 1)} type="fas fa-backward" size="Medium" title="Start"/> 
-            <ButtonWrapper clickControl={() => setPlaying(playing == false) ? true : false} type="fas fa-play" size="Large" title={playing == false ? 'Play' : 'Paused'}/> 
-            <ButtonWrapper clickControl={() => setCount(count + 1)} type="fas fa-forward" size="Medium" title="End"/> 
-            <ButtonWrapper clickControl={() => setCount(count + 1)} type="fas fa-step-forward" size="Small" title="Next"/> 
+            <button onClick={() => setCount(count + 1)}></button>
         </ControlWrapperClass>
     )
 }
