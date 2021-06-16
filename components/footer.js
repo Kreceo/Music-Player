@@ -9,6 +9,14 @@ const FooterClass = styled.footer`
   color: #919191;
 `
 
-export function Footer() {
-  return ( <FooterClass>Copyright&copy; Darrell Lane</FooterClass> )
+function Footer() {
+  return (
+     <>
+      <FooterClass>
+        Copyright&copy; Darrell Lane
+      </FooterClass>
+     </>
+  )
 }
+
+export default Footer;
