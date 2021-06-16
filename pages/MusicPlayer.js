@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MusicPlayer } from '../components/Musicplayer';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 const Background = styled.div`
   :after {

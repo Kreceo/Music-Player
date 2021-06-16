@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 import 'bootstrap/dist/css/bootstrap.css'
 
 const Background = styled.div`
