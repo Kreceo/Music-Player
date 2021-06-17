@@ -13,11 +13,8 @@ export function ControlsWrapper () {
 
     const [shuffle, setShuffle] = useState(false);
     const [previous, setPrevious] = useState(false);
-
     const [next, setNext] = useState(false);
     const [save, setSave] = useState(false);
-    const [count, setCount] = useState(0);
-    
     const [playing, setPlaying] = useState(false)
 
     return (
@@ -52,8 +49,6 @@ export function ControlsWrapper () {
                 size="Small" 
                 title={save == true ? 'Saved' : 'Save'}
             />
-            <p>{count}</p>
-            <button onClick={() => setCount(count + 1)}></button>
         </ControlWrapperClass>
     )
 }

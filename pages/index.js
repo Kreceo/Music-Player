@@ -1,28 +1,50 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import styled from 'styled-components';
+import { MusicPlayer } from '../components/Musicplayer';
+import Footer from '../components/footer';
 
-export default function Homepage() {
-    return(
-        <>
-        <div className="d-flex container flex-row align-items-center vh-100">
-            <div class="container mt-5 mb-3">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="/MusicPlayer" className="text-decoration-none">
-                            <div class="card p-5 mb-2 shadow">
-                                <h1 class="display-3 text-center">Music Player</h1>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-md-6">
-                        <a href="/GitProfiler" className="text-decoration-none">
-                            <div class="card p-5 mb-2 shadow">
-                                <h1 class="display-3 text-center">Git Profiler</h1>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </>
-    )
+const Background = styled.div`
+  :after {
+    background: no-repeat 25vw 40vh / 30vw url("https://assets.codepen.io/518555/blobSolid.svg");
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+  }
+
+  & {
+    align-items: center;
+    background-color: #fff8e7;
+    color: #545454;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+  }
+
+  :before {
+    background: no-repeat 23vw 30vh   
+    url("https://assets.codepen.io/518555/sparkles1.svg"), no-repeat right 25vw bottom 30vh 
+    url("https://assets.codepen.io/518555/sparkles4.svg"), no-repeat 40vw 30vh / 35vw 
+    url("https://assets.codepen.io/518555/blobStripe.svg");
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+  } 
+`
+
+export default function App () {
+  return (
+    <>
+      <Background>
+          <MusicPlayer />
+          <Footer />
+      </Background>
+    </>
+  )
 }
